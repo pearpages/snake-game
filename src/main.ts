@@ -1,4 +1,5 @@
 import { gameContext } from "./GameContext";
+import packageJson from '../package.json';
 
 /**
  * Set up the canvas
@@ -26,5 +27,9 @@ import { gameContext } from "./GameContext";
  * - If the key is an arrow key:
  *  - Change the snake's direction
  */
+
+const version = document.createElement('span');
+version.textContent = `v${packageJson.version}`;
+document.getElementById('meta')?.appendChild(version);
 
 gameContext.init();

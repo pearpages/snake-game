@@ -4,7 +4,7 @@ function createCanvas() {
     canvas.width = 400;
     canvas.height = 400;
     canvas.style.border = '1px solid black';
-    document.body.appendChild(canvas);
+    document.getElementById('app')!.appendChild(canvas);
     return {
         canvas,
         getContext() {
